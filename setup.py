@@ -6,7 +6,7 @@ from setuptools import setup
 from setuptools.extension import Extension
 
 define_macros = [('CYTHON_LIMITED_API', '1'),
-                 ('Py_LIMITED_API', '0x030800f0')]
+                 ('Py_LIMITED_API', '0x030700f0')]
 
 setup(ext_modules=[Extension("test_cython.example",
                              [os.path.join('test_cython', 'example.pyx')],
