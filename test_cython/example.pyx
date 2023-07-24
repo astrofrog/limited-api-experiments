@@ -1,3 +1,6 @@
+import cython
+
+@cython.binding(False)
 def fib(int n):
     cdef int a, b
     a, b = 0, 1
