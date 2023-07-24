@@ -10,5 +10,5 @@ jobs:
     with:
       envs: |
         - linux: py39-test
-        - macos: py310-test
-        - windows: py311-test
+        - linux: py310-test
+        - linux: py311-test
