@@ -9,7 +9,7 @@ from setuptools.extension import Extension
 
 define_macros = [
     ("CYTHON_LIMITED_API", "1"),
-    ("Py_LIMITED_API", "0x030700f0"),
+    ("Py_LIMITED_API", "0x030C0000"),
 ]
 
 setup(
