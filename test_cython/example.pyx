@@ -3,6 +3,8 @@
 import numpy as np
 cimport numpy as np
 
+np.import_array()
+
 from .pnpoly cimport point_in_polygon
 
 __all__ = ['polygonal_overlap_grid']

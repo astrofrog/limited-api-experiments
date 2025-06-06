@@ -7,11 +7,6 @@ import numpy as np
 from setuptools import setup
 from setuptools.extension import Extension
 
-define_macros = [
-    ("CYTHON_LIMITED_API", "1"),
-    ("Py_LIMITED_API", "0x030C0000"),
-]
-
 setup(
     ext_modules=[
         Extension(
@@ -19,7 +14,14 @@ setup(
             [os.path.join("test_cython", "example.pyx")],
             py_limited_api=True,
             include_dirs=[np.get_include()],
-            define_macros=define_macros,
+            define_macros=[("Py_LIMITED_API", "0x030B0000")],
+        ),
+        Extension(
+            "test_cython.pnpoly",
+            [os.path.join("test_cython", "pnpoly.pyx")],
+            py_limited_api=True,
+            include_dirs=[np.get_include()],
+            define_macros=[("Py_LIMITED_API", "0x030B0000")],
         )
     ]
 )
